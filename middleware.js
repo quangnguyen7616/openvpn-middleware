@@ -13,6 +13,6 @@ run = async () => {
     });
     setTimeout(function(){
         console.log('Connected', connected);
-    }, 30000);
+    }, 10000);
 };
 run();
