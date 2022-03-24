@@ -13,6 +13,7 @@ run = async () => {
     });
     setTimeout(function () {
         if (!connected) {
+            console.error('Connection Timeout');
             exec(`pm2 restart middleware;`);
         }
     }, 30000);
