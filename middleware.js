@@ -11,11 +11,15 @@ run = async () => {
     openvpn.stderr.on('data', (data) => {
         console.error(data);
     });
-    setTimeout(function () {
+    /*setTimeout(function () {
         if (!connected) {
             console.error('Connection Timeout');
             exec(`pm2 restart middleware;`);
         }
     }, 30000);
+    setTimeout(function () {
+        console.error('Restart Middleware');
+        exec(`pm2 restart middleware;`);
+    }, 600000);*/
 };
 run();
